@@ -1,0 +1,108 @@
+/* Path: web/src/styles/main.css */
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* Device-specific styles */
+body[data-device-type="mobile"] .container {
+  max-width: 100%;
+  padding: 10px;
+}
+
+body[data-device-type="tablet"] .card {
+  border-radius: 12px;
+}
+
+body[data-device-type="desktop"] .container {
+  max-width: 1140px;
+}
+
+/* Quote result styling */
+#quoteResult {
+  transition: all 0.3s ease;
+}
+
+.extra-checkbox:checked + label {
+  font-weight: bold;
+}
+
+/* Header styling */
+h1 {
+  color: #0d6efd;
+  font-weight: 300;
+}
+
+/* Card styling */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-header {
+  background-color: #f1f8ff;
+  border-bottom: 1px solid #dbeafe;
+}
+
+/* Form styling */
+.form-label {
+  font-weight: 500;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-success {
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+}
+
+/* Table styling */
+.table {
+  margin-bottom: 0;
+}
+
+.table-primary {
+  font-weight: 500;
+}
+
+/* Responsive layout */
+@media (max-width: 767px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  .btn-success {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Animation for quote result */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#quoteResult:not(.d-none) {
+  animation: fadeIn 0.5s ease-out;
+}
